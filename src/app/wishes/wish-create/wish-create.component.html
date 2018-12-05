@@ -1,0 +1,34 @@
+<h2>The wish create module</h2>
+<div class="wish-create">
+  <mat-card>
+    <form (submit)="onAddWish(wishForm)" #wishForm="ngForm">
+      <mat-form-field>
+        <mat-label>Wish Name</mat-label>
+        <input matInput
+        type="text"
+        name="name"
+        ngModel
+        required
+        minlength="3"
+        #name='ngModel'>
+        <mat-error *ngIf="name.invalid">Please enter a wish name</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Wish URL</mat-label>
+        <input
+          matInput
+          type="text"
+          name="url"
+          ngModel
+          required
+          minlength="3"
+          #url='ngModel'>
+        <mat-error *ngIf="url.invalid">Please enter a url</mat-error>
+      </mat-form-field>
+      <button
+      mat-raised-button
+      color = "accent"
+      type="submit">Save Wish</button>
+    </form>
+  </mat-card>
+</div>

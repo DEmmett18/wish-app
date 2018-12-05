@@ -1,0 +1,8 @@
+<mat-accordion multi="true" *ngIf="wishes.length > 0">
+  <mat-expansion-panel *ngFor="let wish of wishes">
+    <mat-expansion-panel-header>
+      {{ wish.name }}
+    </mat-expansion-panel-header>
+      <a>{{ wish.url }}</a>
+  </mat-expansion-panel>
+</mat-accordion>
